@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --black-color: #191919;
+            --beige-color: #F9E492;
+        }
+        
+        body {
+          background-color: var(--beige-color, beige);
+          margin: 0;
+        }
+
+        .container {
+            height: 200px;
+            width: 200px;
+            border: 2px solid var(--black-color, black);
+            display: grid;
+            margin: 100px auto 30px auto;
+        }
+        
+        .description {
+            text-align: center;
+            margin: 0 auto;
+            width: fit-content;
+            padding: 10px;
+            border: 2px solid var(--black-color, black); 
+        }
+        
+        .wrapper > *:not(.fingers), .wrapper > * > * {
+          background-color: var(--black-color, black);
+        }
+        
+        .wrapper {
+          height: 100%;
+          display: grid;
+          place-content: center;
+        }
+        
+        .fingers {
+          position: relative;
+          display: flex;
+          align-items: flex-end;
+          gap: 5px;
+          margin: 0 0 5px 5px;
+        }
+        
+        .finger {
+          width: 20px;
+          border-radius: 50vh;
+        }
+        
+        .h1 { height: 45px; }
+        .h2 { height: 55px; }
+        .h3 { height: 35px; }
+        .h4 { height: 65px; }
+        
+        .palm {
+          width: 100px;
+          height: 40px;
+          border-radius: 0 0 10px 10px;
+        }
+        
+        .hand {
+          width: 50px;
+          height: 45px;
+          margin: 0 auto;
+          border-radius: 0 0 10px 10px;
+        }
+        
+        .palm-finger {
+          position: absolute;
+          top: 25px;
+          transform: rotate(60deg);
+          border: 5px solid var(--beige-color, beige); 
+        }
+      </style>
+    <title>Fist/power logo</title>
+</head>
+<body>
+    <!-- container is only for showing purposes, not included in the icon/logo -->
+    <div class="container">
+        <div class="wrapper">
+            <div class="fingers">
+              <div class="finger h1"></div>
+              <div class="finger h2"></div>
+              <div class="finger h1"></div>
+              <div class="finger h3"></div>
+              <div class="palm-finger finger h4"></div>
+            </div>
+            <div class="palm"></div>
+            <div class="hand"></div>
+          </div>
+    </div>
+    <div class="description">Fist/power logo icon made purely with css.</div>
+</body>
+</html>

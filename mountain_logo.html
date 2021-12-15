@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #293462;
+      margin: 0;
+      height: 100%;
+      z-index: 1001;
+    }
+
+    .logo, p {
+      border: 2px solid white;
+      padding: 20px;
+      width: 300px;
+      color: white;
+      text-align: center;
+    }
+
+    .logo {
+      margin: 100px auto 10px auto;
+    }
+
+    p {
+      margin: 20px auto;
+    }
+    
+    .wrapper {
+      height: 100%;
+      display: grid;
+      place-content: center;
+      z-index: 1001;
+      
+    }
+    
+    .circle {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background: #FFF1C1;
+      border-radius: 100%;
+      display: flex;
+      overflow: hidden;
+      flex-direction: row;
+      z-index: 1001;
+    }
+    
+    .rectangle-small {
+      position: absolute;
+      top: 67%;
+      left: 3%;
+      width: 40px;
+      height: 50px;
+      transform: rotate(45deg);
+      background-color: #FE5F55;
+      overflow: hidden;
+    }
+    
+    .rectangle-big {
+      margin: 70px 30px 0px 30px;
+      width: 150px;
+      height: 250px;
+      transform: rotate(45deg);
+      background-color: #FE5F55;
+      z-index: 1001;
+    }
+  </style>
+  <title>Mountain logo</title>
+</head>
+<body>
+  <div class="logo">
+    <div class="wrapper">
+      <div class="circle">
+          <div class="rectangle-small"></div>
+          <div class="rectangle-big"></div>
+      </div>
+    </div>
+  </div>
+  <p>Mountain logo made with pure css</p>
+</body>
+</html>
