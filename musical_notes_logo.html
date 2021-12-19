@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+
+        :root {
+          --black: #191919;
+          --red: #FE5F55;
+          --red-shadowed: #A64942;
+        }
+
+        body {
+            display: grid;
+            place-content: center;
+            height: 500px;
+            background-color: var(--black);
+        }
+
+        .notes-logo-wrapper {
+            display: flex;
+            padding: 50px 50px 50px 100px;
+            width: min-content;
+            justify-content: center;
+            border: 5px solid var(--red);
+        }
+        
+        .note {
+          position: relative;
+        }
+        
+        .dash {
+          width: 10px;
+          height: 100px;
+          background-color: var(--red);
+        }
+        
+        .circle {
+           position: absolute;
+          top: 80px;
+          left: -40px;
+          width: 50px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: var(--red);
+        }
+        
+        .line {
+          width: 60px;
+          height: 10px;
+          background-color: var(--red);
+        }
+        
+        .double-dash {
+          width: 40px;
+          height: 30px;
+          border-width: 10px 0px 10px 10px;
+          border-style: solid;
+          border-color: var(--red);
+        }
+        
+        .margin-bg { margin-left: 60px; }
+        .shadowed { background-color: var(--red-shadowed); }
+        .small-l { width: 30px; }
+        .margin-sm { margin-left: 30px; }
+        .short-d { height: 70px; }
+
+        p {
+            border-bottom: 2px solid var(--red);
+            color: var(--red);
+            padding: 10px;
+            text-align: center;
+        }
+        
+      </style>
+    <title>Musical notes logo</title>
+</head>
+<body>
+    <div class="notes-logo-wrapper">
+        <div class="note">
+          <div class="dash"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="line"></div>
+        <div class="note">
+          <div class="dash"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="note margin-bg">
+          <div class="dash shadowed"></div>
+          <div class="circle shadowed"></div>
+        </div>
+        <div class="line small-l shadowed"></div>
+        <div class="note margin-sm">
+          <div class="double-dash"></div>
+          <div class="dash short-d"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+      <p>Musical notes logo made purely with css.</p>
+</body>
+</html>

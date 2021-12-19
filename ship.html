@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+          --blue: #5DBCF9;
+          --black: #191919;
+        }
+        
+        body {
+          margin: 0;
+          background-color: var(--black, black);
+        }
+        
+        .wrapper {
+          position: relative;
+          width: 100%;
+          height: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .block { border: 10px solid var(--blue); }
+        
+        .small-b {
+          width: 30px;
+          height: 20px;
+          border-bottom: none;
+        }
+        
+        .big-b {
+          width: 80px;
+          height: 80px;
+        }
+        
+        .top-side {
+          position: absolute;
+          margin-top: 14px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 55px;
+          
+        }
+        
+        .sides {
+          margin-top: 75px;
+          position: absolute;
+          display: flex;
+          width: 120px;
+          justify-content: space-between;
+          background-color: var(--black);
+        }
+        
+        .top-deck {
+          width: 10px;
+          height: 80px;
+          background-color: var(--black);
+          border-bottom: none;
+          z-index: 1001;
+        }
+        
+        .left-sd {
+          background-color: var(--blue);
+          transform: rotate(60deg);
+        }
+        
+        .right-sd {
+          background-color: var(--blue);
+          transform: rotate(120deg);
+        }
+        
+        .side-deck-left {
+          width: 10px;
+          height: 40px;
+          background-color: var(--blue);
+          transform: rotate(150deg);
+          border-bottom: none;
+          z-index: 1001;
+        }
+        
+        .side-deck-right {
+          width: 10px;
+          height: 40px;
+          background-color: var(--blue);
+          transform: rotate(30deg);
+          border-bottom: none;
+          z-index: 1001;
+        }
+        
+        .side-deck-middle {
+          position: absolute;
+          top: -30px;
+          left: 55px;
+          width: 10px;
+          height: 60px;
+          background-color: var(--blue);
+          border-bottom: none;
+          z-index: 1001;
+        }
+        
+        .border { 
+          background-color: var(--blue);
+          border: 10px solid var(--black);
+          height: 10px;
+          border-bottom: none;
+        }
+        
+        .big-l { 
+          top: 190px;
+          width: 200px; 
+          z-index: 100001; 
+          border-top: 10px solid var(--black);
+        }
+        
+        .small-l { width: 110px;  }
+
+        p {
+            padding: 10px;
+            border: 2px solid var(--blue);
+            color: var(--blue);
+            width: 250px;
+            text-align: center;
+            margin: 0 auto;
+        }
+      </style>
+    <title>Ship logo</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="small-b block"></div>
+        <div class="big-b block"></div>
+        <div class="top-side">
+            <div class="left-sd top-deck"></div>
+          <div class="right-sd top-deck"></div>
+        </div>
+        <div class="sides">
+            <div class="side-deck-left"></div>
+          <div class="side-deck-middle"></div>
+          <div class="side-deck-right"></div>
+        </div> 
+        <div class="big-l border"></div>
+        <div class="small-l border"></div>
+      </div>  
+      <p>Ship logo made with pure css</p>
+</body>
+</html>
